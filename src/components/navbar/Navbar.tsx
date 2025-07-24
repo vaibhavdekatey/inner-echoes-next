@@ -23,28 +23,32 @@ const Navbar = () => {
   return (
     <>
       <nav className=" relative min-w-full">
-        <div className="min-w-full mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="min-w-full">
           <div className="h-16 flex items-center justify-between">
-            <Link href="/" className="font-mono text-2xl mr">
-              PixCode.
-            </Link>
-            <div className=" flex-row font-mono hidden md:flex">
+            <div>
+              <Link
+                href="/"
+                className="font-mono text-2xl font-bold bg-gradient-to-r from-neutral-200 to-neutral-400 text-transparent bg-clip-text">
+                PixCode.
+              </Link>
+            </div>
+            <div className=" flex-row font-mono hidden lg:flex">
               {navLinks.map((navlink) => (
                 <div
                   key={navlink.id}
-                  className="mx-3 hover:text-neutral-400 transition-all ease-in-out">
+                  className="sm:mx-1 md:mx-2 mx-3 md:text-sm hover:text-neutral-400 transition-all ease-in-out">
                   <Link href={navlink.url}>{navlink.title}</Link>
                 </div>
               ))}
               <button
-                className="hover:text-neutral-400 ml-3 transition-all ease-in-out"
+                className="hover:text-neutral-400 ml-3 sm:mx-1 md:mx-2 mx-3 md:text-sm transition-all ease-in-out"
                 onClick={() => console.log("Logout Pressed")}>
                 Logout
               </button>
             </div>
-            <div className="md:hidden">
+            <div className="lg:hidden">
               <button
-                className="font-mono md:hidden mx-3"
+                className="font-mono lg:hidden mx-3"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 Menu
               </button>

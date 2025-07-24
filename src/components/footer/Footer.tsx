@@ -4,7 +4,7 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <div className="min-w-full flex flex-row mx-auto my-3 px-4 sm:px-6 lg:px-8 justify-between items-center">
+      <div className="min-w-full flex flex-row my-3 justify-between items-center">
         <div className="font-mono">©PixCode. All rights reserved.</div>
         <div className="flex flex-row justify-center items-center">
           <Link href="#" className="mx-1">
